@@ -10,7 +10,7 @@
 
 <div
   class={`${backgroundColor} ${rowColDetais} ${
-    hiddenInSmallDevice && ` hidden md:block ${extraClass}`
+    hiddenInSmallDevice && `hidden md:block ${extraClass}`
   }`}
 >
   {#if mountain}
