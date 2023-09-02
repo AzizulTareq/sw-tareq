@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { countryDataStore, isLoading } from "../../stores/countryDataStore";
+  import CountryTable from "../../lib/components/chart/CountryTable.svelte";
 
   onMount(async () => {
     try {
@@ -17,7 +18,10 @@
 </script>
 
 <main>
-  <h1>Country Data</h1>
+  <div class="mx-20 mt-20">
+    <CountryTable {countryDataStore} {isLoading} />
+  </div>
+  <!-- <h1>Country Data</h1>
   {#if $isLoading}
     <p>Loading...</p>
   {:else}
@@ -26,5 +30,5 @@
         <li>{country.name.common}</li>
       {/each}
     </ul>
-  {/if}
+  {/if} -->
 </main>
