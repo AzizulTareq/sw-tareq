@@ -31,6 +31,7 @@
     <Box
       backgroundColor={"bg-yellow-100"}
       rowColDetais={`row-span-2 md:row-span-4 row-span-3 col-span-4`}
+      mountain={true}
     />
     <Box
       backgroundColor={"bg-emerald-400"}
