@@ -21,14 +21,4 @@
   <div class="mx-20 mt-20">
     <CountryTable {countryDataStore} {isLoading} />
   </div>
-  <!-- <h1>Country Data</h1>
-  {#if $isLoading}
-    <p>Loading...</p>
-  {:else}
-    <ul>
-      {#each $countryDataStore as country, index (index)}
-        <li>{country.name.common}</li>
-      {/each}
-    </ul>
-  {/if} -->
 </main>
