@@ -2,6 +2,21 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
+## Run the project
+
+If you want to run the project in your local machine just follow the below steps.
+
+```bash
+# clones the repository to your machine
+git clone git@github.com:AzizulTareq/sw-tareq.git
+
+# create a new project in my-app
+npm install
+
+# run the project
+npm run build
+```
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
@@ -12,17 +27,6 @@ npm create svelte@latest
 
 # create a new project in my-app
 npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
 ## Building
