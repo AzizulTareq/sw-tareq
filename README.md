@@ -10,7 +10,7 @@ If you want to run the project in your local machine just follow the below steps
 # clones the repository to your machine
 git clone git@github.com:AzizulTareq/sw-tareq.git
 
-# create a new project in my-app
+# installs all dependencies
 npm install
 
 # run the project
