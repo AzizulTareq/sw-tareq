@@ -1,4 +1,7 @@
-<div>
-    this is the map page
-    <a href="/">home</a>
-</div>
+<script>
+  import OpenlayerMap from "../../lib/components/map/OpenlayerMap.svelte";
+</script>
+
+<main>
+  <OpenlayerMap />
+</main>
