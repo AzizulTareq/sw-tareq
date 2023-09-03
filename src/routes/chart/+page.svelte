@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { countryDataStore, isLoading } from "../../stores/countryDataStore";
   import CountryTable from "../../lib/components/chart/CountryTable.svelte";
+  import PolarAreaChart from "../../lib/components/chart/PolarAreaChart.svelte";
 
   onMount(async () => {
     try {
@@ -18,7 +19,12 @@
 </script>
 
 <main>
-  <div class="mx-20 mt-20">
-    <CountryTable {countryDataStore} {isLoading} />
+  <div class="lg:grid lg:grid-cols-3 gap-6 mx-12 mt-12">
+    <div class="col-span-2">
+      <CountryTable />
+    </div>
+    <div>
+      <PolarAreaChart />
+    </div>
   </div>
 </main>

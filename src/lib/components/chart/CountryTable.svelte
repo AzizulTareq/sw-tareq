@@ -1,15 +1,19 @@
 <script>
-  export let isLoading;
-  export let countryDataStore;
+  import {
+    countryDataStore,
+    isLoading,
+  } from "../../../stores/countryDataStore";
 </script>
 
 <main>
   <div class="flex flex-col">
     <div class="rounded-lg overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 sm:px-6 lg:px-8">
-        <div class="border-[1px] border-gray-300 rounded-lg overflow-hidden">
-          <table class="min-w-full text-left text-sm font-light">
-            <thead class="border-b font-medium dark:border-neutral-500">
+        <div
+          class="border-[1px] border-gray-300 rounded-lg overflow-hidden overflow-x-auto"
+        >
+          <table class="min-w-full text-left">
+            <thead class="border-b font-semibold">
               <tr>
                 <th scope="col" class="px-6 py-4 whitespace-nowrap">Flag</th>
                 <th scope="col" class="px-6 py-4 whitespace-nowrap">Name</th>
@@ -32,12 +36,10 @@
             </thead>
             <tbody>
               {#if $isLoading}
-                <div class="flex justify-center items-center h-screen w-screen">
-                  Loading...
-                </div>
+                <div class="flex justify-center items-center">Loading...</div>
               {:else}
                 {#each $countryDataStore as country, index (index)}
-                  <tr class="border-b dark:border-neutral-500">
+                  <tr class="border-b">
                     <td class="whitespace-nowrap px-6 py-2 font-medium">
                       <img
                         src={country.flags.png}
@@ -45,16 +47,16 @@
                         class="w-10 h-6"
                       />
                     </td>
-                    <td class="whitespace-nowrap px-6 py-4"
+                    <td class="px-6 py-4"
                       >{country.name.common ? country.name.common : "--"}</td
                     >
-                    <td class="whitespace-nowrap px-6 py-4"
+                    <td class="px-6 py-4"
                       >{country.population ? country.population : "--"}</td
                     >
-                    <td class="whitespace-nowrap px-6 py-4 text-center"
+                    <td class="px-6 py-4 text-center"
                       >{country.cioc ? country.cioc : "--"}</td
                     >
-                    <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <td class="px-6 py-4 text-center">
                       {#if country.unMember}
                         <span
                           class="bg-zinc-300 px-3 py-1 w-8 h-5 rounded font-semibold text-white"
@@ -67,12 +69,12 @@
                         >
                       {/if}</td
                     >
-                    <td class="whitespace-nowrap px-6 py-4 text-center"
+                    <td class="px-6 py-4 text-center"
                       >{country.currencies
                         ? Object.keys(country.currencies).join(", ")
                         : "--"}</td
                     >
-                    <td class="whitespace-nowrap px-6 py-4"
+                    <td class="px-6 py-4"
                       >{country.languages
                         ? Object.values(country.languages).join(", ")
                         : "--"}</td
